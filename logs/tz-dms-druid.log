@@ -1,0 +1,21 @@
+[druid] 2018-12-04 09:25:29,778 [main           ] ERROR nfeng.bigdata.etl.mr.LogEtlApp {1} - 设置输入输出路径异常
+   java.lang.RuntimeException: 输入路径不存在hdfs://hadoop-02:9000/logs/12/03
+	at com.qianfeng.bigdata.etl.mr.LogEtlApp.handleInputOutput(LogEtlApp.java:73)
+	at com.qianfeng.bigdata.etl.mr.LogEtlApp.run(LogEtlApp.java:51)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.qianfeng.bigdata.etl.mr.LogEtlApp.main(LogEtlApp.java:25)
+[druid] 2018-12-04 09:25:30,070 [main           ] ERROR nfeng.bigdata.etl.mr.LogEtlApp {1} - 执行etl异常
+   org.apache.hadoop.mapred.InvalidJobConfException: Output directory not set.
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:138)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:266)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:139)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1290)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1287)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1762)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1287)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1308)
+	at com.qianfeng.bigdata.etl.mr.LogEtlApp.run(LogEtlApp.java:52)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.qianfeng.bigdata.etl.mr.LogEtlApp.main(LogEtlApp.java:25)
