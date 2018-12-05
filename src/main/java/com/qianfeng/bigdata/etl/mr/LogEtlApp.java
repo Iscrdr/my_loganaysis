@@ -63,7 +63,8 @@ public class LogEtlApp implements Tool {
             FileSystem fs = FileSystem.get(job.getConfiguration());
             // 输入路径/logs/11/11
 
-
+            month = "12";
+            day = "02";
 
             Path inPath = new Path("hdfs://hadoop-02:9000/logs/"+month+"/"+day);
             Path outPath = new Path("hdfs://hadoop-02:9000/logs/ods/"+month+"/"+day);

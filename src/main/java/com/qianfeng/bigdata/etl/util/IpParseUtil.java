@@ -10,7 +10,7 @@ public class IpParseUtil {
         String country = IPSeeker.getInstance().getCountry(ip);
         if(StringUtils.isNotEmpty(country.trim())){
             if(country.equals("局域网")){
-                System.out.println(country);
+
                 regionInfo.setCountry("中国");
                 regionInfo.setProvince("北京市");
                 regionInfo.setCity("昌平区");

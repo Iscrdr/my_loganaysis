@@ -11,6 +11,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,8 +24,7 @@ public class LogEtlMapper extends Mapper<LongWritable, Text, LogWritable, NullWr
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         record ++;
-        System.out.println("====================");
-        System.out.println(record);
+
         if(StringUtils.isBlank(line)){
             recordNULL++;
             logger.debug("本行没有数据: "+key.get()+", 共有 "+recordNULL+" 行无数据 ");
@@ -52,6 +52,8 @@ public class LogEtlMapper extends Mapper<LongWritable, Text, LogWritable, NullWr
 
 
             LogWritable logByMap = LogParseUtil.getLogByMap(map);
+            System.out.println("============================");
+            System.out.println(logByMap);
             context.write(logByMap,NullWritable.get());
         }
 

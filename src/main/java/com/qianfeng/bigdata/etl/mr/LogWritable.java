@@ -364,37 +364,37 @@ public class LogWritable implements Writable {
 
     @Override
     public String toString() {
-        return "'" +
-                "ver='" + ver + '\'' +
-                ", s_time='" + s_time + '\'' +
-                ", en='" + en + '\'' +
-                ", u_ud='" + u_ud + '\'' +
-                ", u_mid='" + u_mid + '\'' +
-                ", u_sd='" + u_sd + '\'' +
-                ", c_time='" + c_time + '\'' +
-                ", l='" + l + '\'' +
-                ", b_iev='" + b_iev + '\'' +
-                ", b_rst='" + b_rst + '\'' +
-                ", p_url='" + p_url + '\'' +
-                ", p_ref='" + p_ref + '\'' +
-                ", tt='" + tt + '\'' +
-                ", pl='" + pl + '\'' +
-                ", ip='" + ip + '\'' +
-                ", oid='" + oid + '\'' +
-                ", on='" + on + '\'' +
-                ", cua='" + cua + '\'' +
-                ", cut='" + cut + '\'' +
-                ", pt='" + pt + '\'' +
-                ", ca='" + ca + '\'' +
-                ", ac='" + ac + '\'' +
-                ", kv_='" + kv_ + '\'' +
-                ", du='" + du + '\'' +
-                ", browserName='" + browserName + '\'' +
-                ", browserVersion='" + browserVersion + '\'' +
-                ", osName='" + osName + '\'' +
-                ", osVersion='" + osVersion + '\'' +
-                ", country='" + country + '\'' +
-                ", province='" + province + '\'' +
-                ", city='" + city + '\'';
+        return "" +
+                 ver +
+                "," + s_time +
+                "," + en +
+                "," + u_ud +
+                "," + u_mid +
+                "," + u_sd +
+                "," + c_time +
+                "," + l +
+                "," + b_iev +
+                "," + b_rst +
+                "," + p_url +
+                "," + p_ref +
+                "," + tt +
+                "," + pl +
+                "," + ip +
+                "," + oid +
+                "," + on +
+                "," + cua +
+                "," + cut +
+                "," + pt +
+                "," + ca +
+                "," + ac +
+                "," + kv_ +
+                "," + du +
+                "," + browserName +
+                "," + browserVersion +
+                "," + osName +
+                "," + osVersion +
+                "," + country +
+                "," + province +
+                "," + city;
     }
 }

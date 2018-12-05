@@ -18,6 +18,7 @@ public class LogParseUtil {
     public static LogWritable getLogByMap(Map<String,String> map){
         Set<Map.Entry<String, String>> entries = map.entrySet();
         LogWritable log = new LogWritable();
+
         for (Map.Entry<String,String> en : entries) {
            String key =  en.getKey();
            String value = en.getValue();
@@ -46,8 +47,10 @@ public class LogParseUtil {
                 case "ac" : log.setAc(value);break;
                 case "kv_" : log.setKv_(value);break;
                 case "du" : log.setDu(value);break;
-                case "browserName" : log.setBrowserName(value);break;
-                case "browserVersion" : log.setBrowserVersion(value);break;
+                case "browserName" : log.setBrowserName(value);
+                    break;
+                case "browserVersion" : log.setBrowserVersion(value);
+                     break;
                 case "osName" : log.setOsName(value);break;
                 case "osVersion" : log.setOsVersion(value);break;
                 case "country" : log.setCountry(value);break;
@@ -78,6 +81,8 @@ public class LogParseUtil {
     public static void handleAgent(Map<String, String> map) {
         if(map.containsKey(Constants.LOG_USERAGENT)){
             UserAgentInfo info = UserAgnetParserUtil.parserUserAgent(map.get(Constants.LOG_USERAGENT));
+
+
             map.put(Constants.LOG_BROWSER_NAME,info.getBrowserName());
             map.put(Constants.LOG_BROWSER_VERSION,info.getBrowserVersion());
             map.put(Constants.LOG_OS_NAME,info.getOsName());

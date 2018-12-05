@@ -18,6 +18,5 @@ public class SprinGTests {
 
     @Test
     public void testAll(){
-        userSerice.getConn();
     }
 }
